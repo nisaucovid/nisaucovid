@@ -18,9 +18,11 @@
       line-height: 22px;
       }
       h1 {
-      font-weight: 400;
+      font-weight: 1000;
+	  color: #095484;
       }
-      h4 {
+      h5 {
+	  font-weight: 600;
       margin: 22px 0 4px;
       color: #095484;
       }
@@ -106,17 +108,17 @@
         
 		<!--Introduction-->
 		<h1>NISAU Survey Form</h1>
-        <p>Thank you for taking the time to fill in our online feedback form. By providing us your feedback, you are helping us understand what we do well and what improvements we need to implement.</p>
+        <p>The Covid-19 pandemic has considerably impacted the higher education sector in the UK and globally. The UK is a popular destination for Indian students, many of whom have been looking forward to commencing their studies in the UK from September onward but are now faced with confusion and uncertainty around whether they would be able to proceed as planned. We, the National Indian Students and Alumni Union UK are conducting this survey to ascertain the concerns and requirements of Indian students so that we can support universities and higher education stakeholders in responding better to Indian students' requirements.</p>
 		
 		<br>
-		<h2>Section 1: About You</h2>
+		<h5>Section 1: About You</h5>
 		
 		<!--Question 1-->
-		<h4>Full Name</h4>
+		<h5>Full Name</h5>
         <input class="you" type="text" name="name" placeholder="First" />
 		
 		<!--Question 2-->
-		<h4>Are you an Indian Citizen?</h4>
+		<h5>Are you an Indian Citizen?</h5>
 		<table>
 		<div>
 			<tr>
@@ -133,7 +135,7 @@
 		</table>
 		
 		<!--Question 3-->
-		<h4>Which part of India are you from?</h4>
+		<h5>Which part of India are you from?</h5>
 		<div>
 		<select id="element_10" name="state" required /> 
 			<option value="" selected="selected"></option>
@@ -177,16 +179,16 @@
 		</div>
 		
 		<!--Question 4-->
-		<h4>What’s the most recent level of course you completed?</h4>
+		<h5>What’s the most recent level of course you completed?</h5>
         <input class="education" type="text" name="educate" placeholder="(e.g. CBSE 12th Boards, Undergraduate degree etc.)" required />
 		
 		
 		<br><br><br>
-		<h2>Section 2: About the education you seek</h2>
+		<h5>Section 2: About the education you seek</h5>
 		<br>
 		
 		<!--Question 5-->
-		<h4>What level of course are you planning to study in the UK?</h4>
+		<h5>What level of course are you planning to study in the UK?</h5>
 		<div>
               <input type="radio" value="Yes" id="sOne" name="study-level" required />
               <label for="sOne" class="radio">Undergraduate Program</label>
@@ -201,11 +203,11 @@
         </div>
 		
 		<!--Question 6-->
-		<h4>Which course/subject are you looking to pursue in the UK</h4>
+		<h5>Which course/subject are you looking to pursue in the UK</h5>
 		<input class="course-subject" type="text" name="subject" placeholder="(If undecided, specify the broader subject area)" required />
 		
 		<!--Question 7-->
-		<h4>What is the duration of the program that you are planning to study in the UK?</h4>
+		<h5>What is the duration of the program that you are planning to study in the UK?</h5>
 		<table>
         	<tr>
 				<th align="center"><label for="duration1">1 Yr</label></th>
@@ -224,7 +226,7 @@
 		</table>
 		
 		<!--Question 8-->
-		<h4>Is there any specific region in the UK that you are focusing to apply to (or have applied to)?</h4>
+		<h5>Is there any specific region in the UK that you are focusing to apply to (or have applied to)?</h5>
 		<table>
 			<tr>
 				<td><label class="choice" for="location_1">London</label></td>
@@ -248,11 +250,11 @@
 		</table>
 		
 		<!--Question 9-->
-		<h4>How many UK universities have you applied to?</h4>
+		<h5>How many UK universities have you applied to?</h5>
 		<input class="no-of-uni" type="number" name="no-of-uni" />
 		
 		<!--Question 10-->
-		<h4>Have you receieved an offer from any of the universities?</h4>
+		<h5>Have you receieved an offer from any of the universities?</h5>
 		<table>
 		<div>
 			<tr>
@@ -269,11 +271,11 @@
 		</table>
 		
 		<!--Question 11-->
-		<h4>Which universities have you applied to?</h4>
+		<h5>Which universities have you applied to?</h5>
 		<textarea rows="3" id="uni_name" name="uni_name"></textarea>
 		
 		<!--Question 12-->
-		<h4>Have you decided about whether you will be starting your UK education in the next intake (i.e. September/October 2020)?</h4>
+		<h5>Have you decided about whether you will be starting your UK education in the next intake (i.e. September/October 2020)?</h5>
 		<table>
 		<div>
 			<tr>
@@ -290,7 +292,7 @@
 		</table>
 		
 		<!--Question 13-->
-		<h4>If you haven’t yet decided, what is the reason? (You can choose multiple options)</h4>
+		<h5>If you haven’t yet decided, what is the reason? (You can choose multiple options)</h5>
 		<table>
 		<div>
 			<tr>
@@ -325,7 +327,7 @@
 		</table>
 		
 		<!--Question 14-->
-		<h4>What are the 3 most important factors for you in choosing to study abroad?</h4>
+		<h5>What are the 3 most important factors for you in choosing to study abroad?</h5>
 		<table>
 		<div>
 			<tr>
@@ -425,7 +427,7 @@
 					<select id="f8" name="state" required /> 
 						<option value="" selected="selected"></option>
 						<option value=”H1”>1</option>
-						<option value=”H2”>2</option>
+						<option value=”h5”>2</option>
 						<option value=”H3”>3</option>
 					</select>
 					</div></td>
@@ -492,7 +494,7 @@
 		</table>
 		
 		<!--Question 15-->
-		<h4>If you aren’t able to travel to the UK to study, which of the following factors would cause you the greatest disappointment?</h4>
+		<h5>If you aren’t able to travel to the UK to study, which of the following factors would cause you the greatest disappointment?</h5>
 		<table>
 			<tr>
 				<td><label class="choice" for="u1">Not getting the physical experience of studying in a UK university</label></td>
@@ -524,7 +526,7 @@
 		</table>
 		
 		<!--Question 16-->
-		<h4>If you are a student considering whether or not to accept a place at a UK university for a programme starting in Sept 2020, which of the following is true about your decision?  (You can select more than one option)</h4>
+		<h5>If you are a student considering whether or not to accept a place at a UK university for a programme starting in Sept 2020, which of the following is true about your decision?  (You can select more than one option)</h5>
 		<table>
 			<tr>
 				<td><label class="choice" for="t1">I would join the program if at least some classes take place in-person, even if the whole program is not delivered in-person</label></td>
@@ -560,7 +562,7 @@
 		</table>
 		
 		<!--Question 17-->
-		<h4>As an alternative to a full-time residential program in the UK, if a UK university were to offer a programme in partnership with an Indian university, which of the following would make such a program attractive for you? </h4>
+		<h5>As an alternative to a full-time residential program in the UK, if a UK university were to offer a programme in partnership with an Indian university, which of the following would make such a program attractive for you? </h5>
 		<table>
             <thead>
               <tr>
@@ -633,7 +635,7 @@
           </table>
 		
 		<!--Question 18-->
-		<h4>Many British universities are considering moving to a completely online mode of teaching for the academic year 2020-21. Is this something you would be interested in?</h4>
+		<h5>Many British universities are considering moving to a completely online mode of teaching for the academic year 2020-21. Is this something you would be interested in?</h5>
 		<div>
 					<select id="british" name="british" required /> 
 						<option value="" selected="selected"></option>
@@ -644,7 +646,7 @@
 					</div>
 		
 		<!--Question 19-->
-		<h4>Many British universities are considering moving to a partially online mode of teaching for the academic year 2020-21. This is likely to entail online learning in the beginning followed by regular classes when the Covid-19 situation improves. Is this something you would be interested in?</h4>
+		<h5>Many British universities are considering moving to a partially online mode of teaching for the academic year 2020-21. This is likely to entail online learning in the beginning followed by regular classes when the Covid-19 situation improves. Is this something you would be interested in?</h5>
 		<div>
 					<select id="british1" name="british1" required /> 
 						<option value="" selected="selected"></option>
@@ -655,7 +657,7 @@
 					</div>
 		
 		<!--Question 20-->
-		<h4>Which of these options would you consider?</h4>
+		<h5>Which of these options would you consider?</h5>
 		<table>
 		<div>
 			<tr>
@@ -672,7 +674,7 @@
 		</table>
 		
 		<!--Question 21-->
-		<h4>Do you know about UK’s new Post Study Work visa (Graduate Route)?</h4>
+		<h5>Do you know about UK’s new Post Study Work visa (Graduate Route)?</h5>
 		<table>
 		<div>
 			<tr>
@@ -689,7 +691,7 @@
 		</table>
 		
 		<!--Question 22-->
-		<h4>If yes, is it one of the reasons you are choosing to study in the UK?</h4>
+		<h5>If yes, is it one of the reasons you are choosing to study in the UK?</h5>
 		<table>
 		<div>
 			<tr>
@@ -706,7 +708,7 @@
 		</table>
 		
 		<!--Question 23-->
-		<h4>If not UK, which other countries would you prefer to study in?</h4>
+		<h5>If not UK, which other countries would you prefer to study in?</h5>
 		<table>
 			<tr>
 				<td><label class="choice" for="nuk1">USA</label></td>
