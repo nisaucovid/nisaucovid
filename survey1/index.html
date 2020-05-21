@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NISAU Survey Form</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+      h1 {
+      font-weight: 400;
+      }
+      h4 {
+      margin: 22px 0 4px;
+      color: #095484;
+      }
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 3px;
+      }
+      form {
+      width: 100%;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px #ccc; 
+      }
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      vertical-align: middle;
+      }
+      input:hover, textarea:hover {
+      outline: none;
+      border: 1px solid #095484;
+      }
+      .first-name {
+      margin-bottom: 22px;
+      }
+      span {
+      color: red;
+      }
+      th, td {
+      width: 5%;
+      padding: 15px 0;
+      border-bottom: 1px solid #ccc;
+      vertical-align: unset;
+      line-height: 18px;
+      font-weight: 400;
+      word-break: break-all;
+      }
+      .first-col {
+      width: 16%;
+      text-align: left;
+      }
+      table {
+      width: 100%;
+	  text-align: left;
+      }
+      textarea {
+      width: calc(100% - 6px);
+      }
+      .btn-block {
+      margin-top: 20px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      -webkit-border-radius: 5px; 
+      -moz-border-radius: 5px; 
+      border-radius: 5px; 
+      background-color: #095484;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background-color: #0666a3;
+      }
+      @media (min-width: 568px) {
+      th, td {
+      word-break: keep-all;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="testbox">
+      <form action="/">
+        
+		<!--Introduction-->
+		<h1>NISAU Survey Form</h1>
+        <p>Thank you for taking the time to fill in our online feedback form. By providing us your feedback, you are helping us understand what we do well and what improvements we need to implement.</p>
+		
+		<br>
+		<h2>Section 1: About You</h2>
+		
+		<!--Question 1-->
+		<h4>Full Name</h4>
+        <input class="you" type="text" name="name" placeholder="First" />
+		
+		<!--Question 2-->
+		<h4>Are you an Indian Citizen?</h4>
+		<table>
+		<div>
+			<tr>
+				<td><label for="rOne" class="radio">Yes</label></td>
+				<td><input type="radio" value="Yes" id="rOne" name="Indian" required /></td>
+			</tr>
+		</div>
+		<div>
+            <tr>
+				<td><label for="rTwo" class="radio">No</label></td>
+				<td><input type="radio" value="No" id="rTwo" name="Indian" required />
+			</tr>
+		</div>
+		</table>
+		
+		<!--Question 3-->
+		<h4>Which part of India are you from?</h4>
+		<div>
+		<select id="element_10" name="state" required /> 
+			<option value="" selected="selected"></option>
+			<option value=”Andhra Pradesh”>Andhra Pradesh</option>
+			<option value=”Andaman and Nicobar Islands”>Andaman and Nicobar Islands</option>
+			<option value=”Arunachal Pradesh”>Arunachal Pradesh</option>
+			<option value=”Assam”>Assam</option>
+			<option value=”Bihar”>Bihar</option>
+			<option value=”Chandigarh”>Chandigarh</option>
+			<option value=”Chhattisgarh”>Chhattisgarh</option>
+			<option value=”Dadar and Nagar Haveli”>Dadar and Nagar Haveli</option>
+			<option value=”Daman and Diu”>Daman and Diu</option>
+			<option value=”Delhi”>Delhi</option>
+			<option value=”Lakshadweep”>Lakshadweep</option>
+			<option value=”Puducherry”>Puducherry</option>
+			<option value=”Goa”>Goa</option>
+			<option value=”Gujarat”>Gujarat</option>
+			<option value=”Haryana”>Haryana</option>
+			<option value=”Himachal Pradesh”>Himachal Pradesh</option>
+			<option value=”Jammu and Kashmir”>Jammu and Kashmir</option>
+			<option value=”Jharkhand”>Jharkhand</option>
+			<option value=”Karnataka”>Karnataka</option>
+			<option value=”Kerala”>Kerala</option>
+			<option value=”Madhya Pradesh”>Madhya Pradesh</option>
+			<option value=”Maharashtra”>Maharashtra</option>
+			<option value=”Manipur”>Manipur</option>
+			<option value=”Meghalaya”>Meghalaya</option>
+			<option value=”Mizoram”>Mizoram</option>
+			<option value=”Nagaland”>Nagaland</option>
+			<option value=”Odisha”>Odisha</option>
+			<option value=”Punjab”>Punjab</option>
+			<option value=”Rajasthan”>Rajasthan</option>
+			<option value=”Sikkim”>Sikkim</option>
+			<option value=”Tamil Nadu”>Tamil Nadu</option>
+			<option value=”Telangana”>Telangana</option>
+			<option value=”Tripura”>Tripura</option>
+			<option value=”Uttar Pradesh”>Uttar Pradesh</option>
+			<option value=”Uttarakhand”>Uttarakhand</option>
+			<option value=”West Bengal”>West Bengal</option>
+		</select>
+		</div>
+		
+		<!--Question 4-->
+		<h4>What’s the most recent level of course you completed?</h4>
+        <input class="education" type="text" name="educate" placeholder="(e.g. CBSE 12th Boards, Undergraduate degree etc.)" required />
+		
+		
+		<br><br><br>
+		<h2>Section 2: About the education you seek</h2>
+		<br>
+		
+		<!--Question 5-->
+		<h4>What level of course are you planning to study in the UK?</h4>
+		<div>
+              <input type="radio" value="Yes" id="sOne" name="study-level" required />
+              <label for="sOne" class="radio">Undergraduate Program</label>
+        </div>
+        <div>
+              <input type="radio" value="No" id="sTwo" name="study-level" required />
+              <label for="sTwo" class="radio">Postgraduate Taught Program</label>
+        </div>
+		<div>
+              <input type="radio" value="No" id="sThree" name="study-level" required />
+              <label for="sThree" class="radio">Postgraduate Research Program</label>
+        </div>
+		
+		<!--Question 6-->
+		<h4>Which course/subject are you looking to pursue in the UK</h4>
+		<input class="course-subject" type="text" name="subject" placeholder="(If undecided, specify the broader subject area)" required />
+		
+		<!--Question 7-->
+		<h4>What is the duration of the program that you are planning to study in the UK?</h4>
+		<table>
+        	<tr>
+				<th align="center"><label for="duration1">1 Yr</label></th>
+				<th align="center"><label for="duration2">2 Yr</label></th>
+				<th align="center"><label for="duration3">3 Yr</label></th>
+				<th align="center"><label for="duration4">4 Yr</label></th>
+				<th align="center"><label for="duration5">5+Yr</label></th>
+			</tr>
+			<tr>
+				<td><input type="radio" value="1" name="duration" id="duration1" required /></td>
+				<td><input type="radio" value="2" name="duration" id="duration2" required /></td>
+				<td><input type="radio" value="3" name="duration" id="duration3" required /></td>
+				<td><input type="radio" value="4" name="duration" id="duration4" required /></td>
+				<td><input type="radio" value="5" name="duration" id="duration5" required /></td>
+			</tr>
+		</table>
+		
+		<!--Question 8-->
+		<h4>Is there any specific region in the UK that you are focusing to apply to (or have applied to)?</h4>
+		<table>
+			<tr>
+				<td><label class="choice" for="location_1">London</label></td>
+				<td align><input id="location_1" name="locaiton" class="element checkbox" type="checkbox" value="London" /></td>
+			</tr>
+			<tr>
+				<td><label class="choice" for="location_2">England (excl. London)</label></td>
+				<td><input id="location_2" name="location" class="element checkbox" type="checkbox" value="England" /></td>
+			</tr>
+			<tr>
+				<td><label class="choice" for="location_3">Scotland</label></td>
+				<td><input id="location_3" name="location" class="element checkbox" type="checkbox" value="Scotland" /></td>
+			</tr>
+			<tr>
+				<td><label class="choice" for="location_4">Wales</label></td>
+				<td><input id="location_4" name="location" class="element checkbox" type="checkbox" value="Wales" /></td>
+			<tr>	
+				<td><label class="choice" for="location_5">Northern Ireland</label></td>
+				<td><input id="location_5" name="location" class="element checkbox" type="checkbox" value="Northern Ireland" /></td>
+			</tr>
+		</table>
+		
+		<!--Question 9-->
+		<h4>How many UK universities have you applied to?</h4>
+		<input class="no-of-uni" type="number" name="no-of-uni" />
+		
+		<!--Question 10-->
+		<h4>Have you receieved an offer from any of the universities?</h4>
+		<table>
+		<div>
+			<tr>
+				<td><label for="oOne" class="radio">Yes</label></td>
+				<td><input type="radio" value="Yes" id="oOne" name="offer" required /></td>
+			</tr>
+		</div>
+		<div>
+            <tr>
+				<td><label for="oTwo" class="radio">No</label></td>
+				<td><input type="radio" value="No" id="oTwo" name="offer" required/>
+			</tr>
+		</div>	
+		</table>
+		
+		<!--Question 11-->
+		<h4>Which universities have you applied to?</h4>
+		<textarea rows="3" id="uni_name" name="uni_name"></textarea>
+		
+		<!--Question 12-->
+		<h4>Have you decided about whether you will be starting your UK education in the next intake (i.e. September/October 2020)?</h4>
+		<table>
+		<div>
+			<tr>
+				<td><label for="stOne" class="radio">Yes – I have decided I will start in Sep/Oct 2020</label></td>
+				<td><input type="radio" value="Yes" id="stOne" name="startsept" required /></td>
+			</tr>
+		</div>
+		<div>
+            <tr>
+				<td><label for="stTwo" class="radio">No - I have not decided yet</label></td>
+				<td><input type="radio" value="No" id="stTwo" name="startsept" required/>
+			</tr>
+		</div>	
+		</table>
+		
+		<!--Question 13-->
+		<h4>If you haven’t yet decided, what is the reason? (You can choose multiple options)</h4>
+		<table>
+		<div>
+			<tr>
+				<td><label for="n1" class="radio">I am still evaluating my options</label></td>
+				<td><input type="checkbox" value="1" id="n1" name="notdecided"  /></td>
+			</tr>
+		</div>
+		<div>
+            <tr>
+				<td><label for="n2" class="radio">I am worried about whether it will be safe to travel</label></td>
+				<td><input type="checkbox" value="2" id="n2" name="notdecided" />
+			</tr>
+		</div>
+		<div>
+            <tr>
+				<td><label for="n3" class="radio">I do not have clarity about plans for Sep/Oct from the universities I am interested in</label></td>
+				<td><input type="checkbox" value="3" id="n3" name="notdecided" />
+			</tr>
+		</div>		
+		<div>
+            <tr>
+				<td><label for="n4" class="radio"></label>I want to come, but my family is now unsure due to safety concerns resulting from the Covid-19 situation</td>
+				<td><input type="checkbox" value="4" id="n4" name="notdecided" />
+			</tr>
+		</div>	
+		<div>
+            <tr>
+				<td><label for="n5" class="radio">Other</label></td>
+				<td><input type="text" id="n5" name="notdecided" />
+			</tr>
+		</div>
+		</table>
+		
+		<!--Question 14-->
+		<h4>What are the 3 most important factors for you in choosing to study abroad?</h4>
+		<table>
+		<div>
+			<tr>
+				<td><label for="f1" class="radio">The global brand, ranking and prestige of the university</label></td>
+				<td><div>
+					<select id="f1" name="state" required /> 
+						<option value="" selected="selected"></option>
+						<option value=”A1”>1</option>
+						<option value=”A2”>2</option>
+						<option value=”A3”>3</option>
+					</select>
+					</div></td>
+			</tr>
+		</div>
+		<div>
+            <tr>
+				<td><label for="f2" class="radio">The ranking of the department at the university I am applying to</label></td>
+				<td><div>
+					<select id="f2" name="state" required /> 
+						<option value="" selected="selected"></option>
+						<option value=”B1”>1</option>
+						<option value=”B2”>2</option>
+						<option value=”B3”>3</option>
+					</select>
+					</div></td>
+			</tr>
+		</div>
+		<div>
+            <tr>
+				<td><label for="f3" class="radio">The ability to gain international work experience during my course</label></td>
+				<td><div>
+					<select id="f3" name="state" required /> 
+						<option value="" selected="selected"></option>
+						<option value=”C1”>1</option>
+						<option value=”C2”>2</option>
+						<option value=”C3”>3</option>
+					</select>
+					</div></td>
+			</tr>
+		</div>		
+		<div>
+            <tr>
+				<td><label for="f4" class="radio">I want to come, but my family is now unsure due to safety concerns resulting from the Covid-19 situation</label></td>
+				<td><div>
+					<select id="f4" name="state" required /> 
+						<option value="" selected="selected"></option>
+						<option value=”D1”>1</option>
+						<option value=”D2”>2</option>
+						<option value=”D3”>3</option>
+					</select>
+					</div></td>
+			</tr>
+		</div>
+		<div>
+            <tr>
+				<td><label for="f5" class="radio">Having a post study work visa to help me look for job or work experience after my course ends</label></td>
+				<td><div>
+					<select id="f5" name="state" required /> 
+						<option value="" selected="selected"></option>
+						<option value=”E1”>1</option>
+						<option value=”E2”>2</option>
+						<option value=”E3”>3</option>
+					</select>
+					</div></td>
+			</tr>
+		</div>
+		<div>
+            <tr>
+				<td><label for="f6" class="radio">The experience of living in another country</label></td>
+				<td><div>
+					<select id="f6" name="state" required /> 
+						<option value="" selected="selected"></option>
+						<option value=”F1”>1</option>
+						<option value=”F2”>2</option>
+						<option value=”F3”>3</option>
+					</select>
+					</div></td>
+			</tr>
+		</div>
+		<div>
+            <tr>
+				<td><label for="f7" class="radio">Exposure to variety of courses</label></td>
+				<td><div>
+					<select id="f7" name="state" required /> 
+						<option value="" selected="selected"></option>
+						<option value=”G1”>1</option>
+						<option value=”G2”>2</option>
+						<option value=”G3”>3</option>
+					</select>
+					</div></td>
+			</tr>
+		</div>
+		<div>
+            <tr>
+				<td><label for="f8" class="radio">The chance of securing part time work while studying</label></td>
+				<td><div>
+					<select id="f8" name="state" required /> 
+						<option value="" selected="selected"></option>
+						<option value=”H1”>1</option>
+						<option value=”H2”>2</option>
+						<option value=”H3”>3</option>
+					</select>
+					</div></td>
+			</tr>
+		</div>
+		<div>
+            <tr>
+				<td><label for="f9" class="radio">The location of the university</label></td>
+				<td><div>
+					<select id="f9" name="state" required /> 
+						<option value="" selected="selected"></option>
+						<option value=”I1”>1</option>
+						<option value=”I2”>2</option>
+						<option value=”I3”>3</option>
+					</select>
+					</div></td>
+			</tr>
+		</div>
+		<div>
+            <tr>
+				<td><label for="f10" class="radio">Availability of scholarships</label></td>
+				<td><div>
+					<select id="f10" name="state" required /> 
+						<option value="" selected="selected"></option>
+						<option value=”J1”>1</option>
+						<option value=”J2”>2</option>
+						<option value=”J3”>3</option>
+					</select>
+					</div></td>
+			</tr>
+		</div>
+		<div>
+            <tr>
+				<td><label for="f11" class="radio">Tuition fees</label></td>
+				<td><div>
+					<select id="f11" name="state" required /> 
+						<option value="" selected="selected"></option>
+						<option value=”K1”>1</option>
+						<option value=”K2”>2</option>
+						<option value=”K3”>3</option>
+					</select>
+					</div></td>
+			</tr>
+		</div>
+		<div>
+            <tr>
+				<td><label for="f12" class="radio">Social Life</label></td>
+				<td><div>
+					<select id="f12" name="state" required /> 
+						<option value="" selected="selected"></option>
+						<option value=”L1”>1</option>
+						<option value=”L2”>2</option>
+						<option value=”L3”>3</option>
+					</select>
+					</div></td>
+			</tr>
+		</div>
+		<div>
+            <tr>
+				<td><label for="f13" class="radio">Other</label></td>
+				<td><input type="text" id="f13" name="notdecided" />
+			</tr>
+		</div>
+		</table>
+		
+		<!--Question 15-->
+		<h4>If you aren’t able to travel to the UK to study, which of the following factors would cause you the greatest disappointment?</h4>
+		<table>
+			<tr>
+				<td><label class="choice" for="u1">Not getting the physical experience of studying in a UK university</label></td>
+				<td align><input id="u1" name="unable" type="checkbox" value="1" /></td>
+			</tr>
+			<tr>
+				<td><label class="choice" for="u2">Not being able to experience life in the UK</label></td>
+				<td><input id="u2" name="unable" type="checkbox" value="2" /></td>
+			</tr>
+			<tr>
+				<td><label class="choice" for="u3">Not being able to make international friends in the UK</label></td>
+				<td><input id="u3" name="unable" type="checkbox" value="3" /></td>
+			</tr>
+			<tr>
+				<td><label class="choice" for="u4">Not being able to benefit from the new post study work visa (Graduate Route)</label></td>
+				<td><input id="u4" name="unable" type="checkbox" value="4" /></td>
+			<tr>	
+				<td><label class="choice" for="u5">Not having access to the university infrastructure in the UK (e.g. research labs, employment links etc.)</label></td>
+				<td><input id="u5" name="unable" type="checkbox" value="5" /></td>
+			</tr>
+			<tr>
+				<td><label class="choice" for="u6">I wouldn’t be very bothered by not being able to travel to the UK</label></td>
+				<td><input id="u6" name="unable" type="checkbox" value="6" /></td>
+			</tr>
+			<tr>
+				<td><label class="choice" for="u7">Other</label></td>
+				<td><input id="u7" name="unable" type="text" /></td>
+			</tr>
+		</table>
+		
+		<!--Question 16-->
+		<h4>If you are a student considering whether or not to accept a place at a UK university for a programme starting in Sept 2020, which of the following is true about your decision?  (You can select more than one option)</h4>
+		<table>
+			<tr>
+				<td><label class="choice" for="t1">I would join the program if at least some classes take place in-person, even if the whole program is not delivered in-person</label></td>
+				<td align><input id="t1" name="t" type="checkbox" value="1" /></td>
+			</tr>
+			<tr>
+				<td><label class="choice" for="t2">I would only join if the whole program is delivered in-person</label></td>
+				<td><input id="t2" name="t" type="checkbox" value="2" /></td>
+			</tr>
+			<tr>
+				<td><label class="choice" for="t3">If some of the classes will be online, I would only join if the school reduces their fees</label></td>
+				<td><input id="t3" name="t" type="checkbox" value="3" /></td>
+			</tr>
+			<tr>
+				<td><label class="choice" for="t4">I would join the program if there is more clarity and communication from the school on how teaching will be delivered; even if part of it will be online</label></td>
+				<td><input id="t4" name="t" type="checkbox" value="4" /></td>
+			<tr>	
+				<td><label class="choice" for="t5">I would only join the program if there are assurances from the school that our safety will be taken care of by the school in case a lockdown starts while we are there</label></td>
+				<td><input id="t5" name="t" type="checkbox" value="5" /></td>
+			</tr>
+			<tr>
+				<td><label class="choice" for="t6">I would only join the program if the UK government gives me a post study work visa, irrespective of whether the teaching is online or in-person</label></td>
+				<td><input id="t6" name="t" type="checkbox" value="6" /></td>
+			</tr>
+			<tr>
+				<td><label class="choice" for="t7">I would join the program irrespective of teaching and visa because I care about the brand name of the university</label></td>
+				<td><input id="t7" name="t" type="checkbox" value="6" /></td>
+			</tr>
+			<tr>
+				<td><label class="choice" for="t8">I would only join if the Indian government gives me an assurance that they will repatriate me in case international borders are sealed while I am in the UK.</label></td>
+				<td><input id="t8" name="t" type="checkbox" value="6" /></td>
+			</tr>
+		</table>
+		
+		<!--Question 17-->
+		<h4>As an alternative to a full-time residential program in the UK, if a UK university were to offer a programme in partnership with an Indian university, which of the following would make such a program attractive for you? </h4>
+		<table>
+            <thead>
+              <tr>
+                <th class="first-col"></th>
+                <th align="center">Very Unattractive</th>
+                <th align="center">Unattractive</th>
+                <th align="center">Neutral</th>
+                <th align="center">Attractive</th>
+                <th align="center">Very Attractive</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="first-col">Being taught by UK professors online</td>
+                <td><input type="radio" value="1" name="useful" required/></td>
+                <td><input type="radio" value="2" name="useful" required/></td>
+                <td><input type="radio" value="3" name="useful" required/></td>
+                <td><input type="radio" value="4" name="useful" required/></td>
+                <td><input type="radio" value="5" name="useful" required/></td>
+              </tr>
+              <tr>
+                <td class="first-col">Part of the study program to take place in the UK</td>
+                <td><input type="radio" value="1" name="speaker" required/></td>
+                <td><input type="radio" value="2" name="speaker" required/></td>
+                <td><input type="radio" value="3" name="speaker" required/></td>
+                <td><input type="radio" value="4" name="speaker" required/></td>
+                <td><input type="radio" value="5" name="speaker" required/></td>
+              </tr>
+              <tr>
+                <td class="first-col">A degree from the UK university</td>
+                <td><input type="radio" value="1" name="length" required/></td>
+                <td><input type="radio" value="2" name="length" required/></td>
+                <td><input type="radio" value="3" name="length" required/></td>
+                <td><input type="radio" value="4" name="length" required/></td>
+                <td><input type="radio" value="5" name="length" required/></td>
+              </tr>
+			  <tr>
+                <td class="first-col">Networking opportunities in the UK</td>
+                <td><input type="radio" value="1" name="network" required/></td>
+                <td><input type="radio" value="2" name="network" required/></td>
+                <td><input type="radio" value="3" name="network" required/></td>
+                <td><input type="radio" value="4" name="network" required/></td>
+                <td><input type="radio" value="5" name="network" required/></td>
+              </tr>
+			  <tr>
+                <td class="first-col">Ability to secure the post study work visa regardless of the online aspect of my course</td>
+                <td><input type="radio" value="1" name="psw2" required/></td>
+                <td><input type="radio" value="2" name="psw2" required/></td>
+                <td><input type="radio" value="3" name="psw2" required/></td>
+                <td><input type="radio" value="4" name="psw2" required/></td>
+                <td><input type="radio" value="5" name="psw2" required/></td>
+              </tr>
+			  <tr>
+                <td class="first-col">Assurances from both British and Indian Governments that there would be no issues around the recognition of such a course in either country </td>
+                <td><input type="radio" value="1" name="govt" required/></td>
+                <td><input type="radio" value="2" name="govt" required/></td>
+                <td><input type="radio" value="3" name="govt" required/></td>
+                <td><input type="radio" value="4" name="govt" required/></td>
+                <td><input type="radio" value="5" name="govt" required/></td>
+              </tr>
+			  <tr>
+                <td class="first-col">Such a programme would not interest me - I only want a fully residential UK programme</td>
+                <td><input type="radio" value="1" name="nointerest" required/></td>
+                <td><input type="radio" value="2" name="nointerest" required/></td>
+                <td><input type="radio" value="3" name="nointerest" required/></td>
+                <td><input type="radio" value="4" name="nointerest" required/></td>
+                <td><input type="radio" value="5" name="nointerest" required/></td>
+              </tr>
+            </tbody>
+          </table>
+		
+		<!--Question 18-->
+		<h4>Many British universities are considering moving to a completely online mode of teaching for the academic year 2020-21. Is this something you would be interested in?</h4>
+		<div>
+					<select id="british" name="british" required /> 
+						<option value="" selected="selected"></option>
+						<option value=”Yes”>Yes</option>
+						<option value=”No”>No</option>
+						<option value=”Lower Fee”>Yes - but I will want a lower fee</option>
+					</select>
+					</div>
+		
+		<!--Question 19-->
+		<h4>Many British universities are considering moving to a partially online mode of teaching for the academic year 2020-21. This is likely to entail online learning in the beginning followed by regular classes when the Covid-19 situation improves. Is this something you would be interested in?</h4>
+		<div>
+					<select id="british1" name="british1" required /> 
+						<option value="" selected="selected"></option>
+						<option value=”Yes”>Yes</option>
+						<option value=”No”>No</option>
+						<option value=”Lower Fee”>Yes - but I will want a lower fee</option>
+					</select>
+					</div>
+		
+		<!--Question 20-->
+		<h4>Which of these options would you consider?</h4>
+		<table>
+		<div>
+			<tr>
+				<td><label for="kOne" class="radio">Online classes from Sept/Oct 2020, with the option to join on-campus as soon as possible</label></td>
+				<td><input type="radio" value="Online Classes" id="kOne" name="consider" required /></td>
+			</tr>
+		</div>
+		<div>
+            <tr>
+				<td><label for="kTwo" class="radio">Deferring to next intake when the situation returns to normal</label></td>
+				<td><input type="radio" value="Deferral" id="kTwo" name="consider" required />
+			</tr>
+		</div>
+		</table>
+		
+		<!--Question 21-->
+		<h4>Do you know about UK’s new Post Study Work visa (Graduate Route)?</h4>
+		<table>
+		<div>
+			<tr>
+				<td><label for="pOne" class="radio">Yes</label></td>
+				<td><input type="radio" value="Yes" id="pOne" name="PSW" required /></td>
+			</tr>
+		</div>
+		<div>
+            <tr>
+				<td><label for="pTwo" class="radio">No</label></td>
+				<td><input type="radio" value="No" id="pTwo" name="PSW" required />
+			</tr>
+		</div>
+		</table>
+		
+		<!--Question 22-->
+		<h4>If yes, is it one of the reasons you are choosing to study in the UK?</h4>
+		<table>
+		<div>
+			<tr>
+				<td><label for="pyOne" class="radio">Yes</label></td>
+				<td><input type="radio" value="Yes" id="pyOne" name="PSW1"  /></td>
+			</tr>
+		</div>
+		<div>
+            <tr>
+				<td><label for="pyTwo" class="radio">No</label></td>
+				<td><input type="radio" value="No" id="pyTwo" name="PSW1"  />
+			</tr>
+		</div>
+		</table>
+		
+		<!--Question 23-->
+		<h4>If not UK, which other countries would you prefer to study in?</h4>
+		<table>
+			<tr>
+				<td><label class="choice" for="nuk1">USA</label></td>
+				<td align><input id="nuk1" name="locaiton" class="element checkbox" type="checkbox" value="USA" /></td>
+			</tr>
+			<tr>
+				<td><label class="choice" for="nuk2">Canada</label></td>
+				<td><input id="nuk2" name="location" class="element checkbox" type="checkbox" value="Canada" /></td>
+			</tr>
+			<tr>
+				<td><label class="choice" for="nuk3">Australia</label></td>
+				<td><input id="nuk3" name="location" class="element checkbox" type="checkbox" value="Australia" /></td>
+			</tr>
+			<tr>
+				<td><label class="choice" for="nuk4">New Zealand</label></td>
+				<td><input id="nuk4" name="location" class="element checkbox" type="checkbox" value="New Zealand" /></td>
+			<tr>	
+				<td><label class="choice" for="nuk5">Germany</label></td>
+				<td><input id="nuk5" name="location" class="element checkbox" type="checkbox" value="Germany" /></td>
+			</tr>
+			<tr>	
+				<td><label class="choice" for="nuk6">France</label></td>
+				<td><input id="nuk6" name="location" class="element checkbox" type="checkbox" value="France" /></td>
+			</tr>
+			<tr>	
+				<td><label class="choice" for="nuk7">Spain</label></td>
+				<td><input id="nuk7" name="location" class="element checkbox" type="checkbox" value="Spain" /></td>
+			</tr>
+			<tr>	
+				<td><label class="choice" for="nuk8">Denmark</label></td>
+				<td><input id="nuk8" name="location" class="element checkbox" type="checkbox" value="Denmark" /></td>
+			</tr>
+			<tr>	
+				<td><label class="choice" for="nuk9">Ireland</label></td>
+				<td><input id="nuk9" name="location" class="element checkbox" type="checkbox" value="Ireland" /></td>
+			</tr>
+			<tr>	
+				<td><label class="choice" for="nuk10">Singapore</label></td>
+				<td><input id="nuk10" name="location" class="element checkbox" type="checkbox" value="Singapore" /></td>
+			</tr>
+			<tr>	
+				<td><label class="choice" for="nuk11">Dubai</label></td>
+				<td><input id="nuk11" name="location" class="element checkbox" type="checkbox" value="Dubai" /></td>
+			</tr><tr>	
+				<td><label class="choice" for="nuk12">Switzerland</label></td>
+				<td><input id="nuk12" name="location" class="element checkbox" type="checkbox" value="Switzerland" /></td>
+			</tr>
+			<tr>	
+				<td><label class="choice" for="nuk13">China</label></td>
+				<td><input id="nuk13" name="location" class="element checkbox" type="checkbox" value="China" /></td>
+			</tr>
+			<tr>	
+				<td><label class="choice" for="nuk14">Other</label></td>
+				<td><input id="nuk14" name="location" class="element checkbox" type="text" /></td>
+			</tr>
+		</table>
+		
+		<div class="btn-block">
+          <button type="submit" href="/">Submit</button>
+        </div>
+		</form>
+	</body>
+</html>
