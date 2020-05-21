@@ -37,7 +37,7 @@
       }
       input {
 	  font-size: 18px;
-      width: calc(100% - 10px);
+      width: calc(60%);
       padding: 5px;
       border: 1px solid #ccc;
       border-radius: 3px;
@@ -54,6 +54,7 @@
       color: red;
       }
       th, td {
+	  font-size: 18px;
       width: 5%;
       padding: 15px 0;
       border-bottom: 1px solid #ccc;
@@ -67,7 +68,8 @@
       text-align: left;
       }
       table {
-      width: 100%;
+	  font-size: 18px;
+      width: 60%;
 	  text-align: left;
       }
       textarea {
@@ -186,19 +188,28 @@
 		
 		<!--Question 5-->
 		<h5>What level of course are you planning to study in the UK?</h5>
+		<table>
 		<div>
-              <input type="radio" value="Yes" id="sOne" name="study-level" required />
-              <label for="sOne" class="radio">Undergraduate Program</label>
-        </div>
-        <div>
-              <input type="radio" value="No" id="sTwo" name="study-level" required />
-              <label for="sTwo" class="radio">Postgraduate Taught Program</label>
-        </div>
+			<tr>
+				<td><label for="sOne" class="radio">Undergraduate Program</label></td>
+				<td><input type="radio" value="UG" id="sOne" name="Indian" required /></td>
+			</tr>
+		</div>
 		<div>
-              <input type="radio" value="No" id="sThree" name="study-level" required />
-              <label for="sThree" class="radio">Postgraduate Research Program</label>
-        </div>
+            <tr>
+				<td><label for="sTwo" class="radio">Postgraduate Taught Program</label></td>
+				<td><input type="radio" value="PGT" id="sTwo" name="Indian" required />
+			</tr>
+		</div>
+		<div>
+            <tr>
+				<td><label for="sThree" class="radio">Postgraduate Research Program</label></td>
+				<td><input type="radio" value="PGR" id="sThree" name="Indian" required />
+			</tr>
+		</div>
+		</table>
 		
+			
 		<!--Question 6-->
 		<h5>Which course/subject are you looking to pursue in the UK</h5>
 		<input class="course-subject" type="text" name="subject" placeholder="(If undecided, specify the broader subject area)" required />
@@ -214,11 +225,11 @@
 				<th align="center"><label for="duration5">5+Yr</label></th>
 			</tr>
 			<tr>
-				<td><input type="radio" value="1" name="duration" id="duration1" required /></td>
-				<td><input type="radio" value="2" name="duration" id="duration2" required /></td>
-				<td><input type="radio" value="3" name="duration" id="duration3" required /></td>
-				<td><input type="radio" value="4" name="duration" id="duration4" required /></td>
-				<td><input type="radio" value="5" name="duration" id="duration5" required /></td>
+				<td align="center"><input type="radio" value="1" name="duration" id="duration1" required /></td>
+				<td align="center"><input type="radio" value="2" name="duration" id="duration2" required /></td>
+				<td align="center"><input type="radio" value="3" name="duration" id="duration3" required /></td>
+				<td align="center"><input type="radio" value="4" name="duration" id="duration4" required /></td>
+				<td align="center"><input type="radio" value="5" name="duration" id="duration5" required /></td>
 			</tr>
 		</table>
 		
