@@ -6,6 +6,112 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 	<meta name=”viewport” content=”width=device-width, initial-scale=2″>
     <style>
+	/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.radiomark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .radiomark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radiomark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .radiomark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .radiomark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+	
+	
       html, body {
       min-height: 100%;
       }
@@ -14,9 +120,10 @@
       margin: 0;
       outline: none;
       font-family: Roboto, Arial, sans-serif;
+	  font-weight: 500;
       font-size: 18px;
-      font-weight: 500;
       line-height: 22px;
+	  align: justify;
       }
       h5 {
 	  font-size: 18px;
@@ -36,7 +143,7 @@
       box-shadow: 0 2px 5px #ccc; 
       }
       input {
-	  font-size: 22px;
+	  font-size: 18px;
       width: calc(60%);
       padding: 5px;
       border: 1px solid #ccc;
@@ -54,7 +161,7 @@
       color: red;
       }
       th, td {
-	  font-size: 22px;
+	  font-size: 18px;
       width: 5%;
       padding: 15px 0;
       border-bottom: 1px solid #ccc;
@@ -68,7 +175,7 @@
       text-align: left;
       }
       table {
-	  font-size: 22px;
+	  font-size: 18px;
       width: 60%;
 	  text-align: left;
       }
@@ -106,11 +213,11 @@
       <form action="/">
         
 		<!--Introduction-->
-	      <center>
-		      <img src="\img\NISAU_logo.png" width="25%" height="25%">
+		<center>
+		<img src="C:\Users\aakas\Desktop\survey1\img\NISAU_logo.png" width="20%" height="20%">
 		<h1 style="color:#095484">NISAU Survey Form</h1>
-	      </center>
-        <p align="justify">The Covid-19 pandemic has considerably impacted the higher education sector in the UK and globally. The UK is a popular destination for Indian students, many of whom have been looking forward to commencing their studies in the UK from September onward but are now faced with confusion and uncertainty around whether they would be able to proceed as planned. We, the National Indian Students and Alumni Union UK are conducting this survey to ascertain the concerns and requirements of Indian students so that we can support universities and higher education stakeholders in responding better to Indian students' requirements.</p>
+        </center>
+		<p align="justify">The Covid-19 pandemic has considerably impacted the higher education sector in the UK and globally. The UK is a popular destination for Indian students, many of whom have been looking forward to commencing their studies in the UK from September onward but are now faced with confusion and uncertainty around whether they would be able to proceed as planned. We, the National Indian Students and Alumni Union UK are conducting this survey to ascertain the concerns and requirements of Indian students so that we can support universities and higher education stakeholders in responding better to Indian students' requirements.</p>
 		
 		<br>
 		<h2 style="color: #095484">Section 1: About You</h2>
@@ -122,18 +229,20 @@
 		<!--Question 2-->
 		<h5>Are you an Indian Citizen?</h5>
 		<table>
-		<div>
-			<tr>
-				<td><label for="rOne" class="radio">Yes</label></td>
-				<td><input type="radio" value="Yes" id="rOne" name="Indian" required /></td>
-			</tr>
-		</div>
-		<div>
-            <tr>
-				<td><label for="rTwo" class="radio">No</label></td>
-				<td><input type="radio" value="No" id="rTwo" name="Indian" required />
-			</tr>
-		</div>
+		<tr>
+		<td>
+		<label class="container">Yes
+		<input type="radio" name="Indian" value="Yes" required />
+		<span class="radiomark"></span>
+		</label>
+		</td>
+		<td>
+		<label class="container">No
+		<input type="radio" name="Indian" value="No" required />
+		<span class="radiomark"></span>
+		</label>
+		</td>
+		</tr>
 		</table>
 		
 		<!--Question 3-->
@@ -191,27 +300,21 @@
 		
 		<!--Question 5-->
 		<h5>What level of course are you planning to study in the UK?</h5>
-		<table>
-		<div>
-			<tr>
-				<td><label for="sOne" class="radio">Undergraduate Program</label></td>
-				<td><input type="radio" value="UG" id="sOne" name="Indian" required /></td>
-			</tr>
-		</div>
-		<div>
-            <tr>
-				<td><label for="sTwo" class="radio">Postgraduate Taught Program</label></td>
-				<td><input type="radio" value="PGT" id="sTwo" name="Indian" required />
-			</tr>
-		</div>
-		<div>
-            <tr>
-				<td><label for="sThree" class="radio">Postgraduate Research Program</label></td>
-				<td><input type="radio" value="PGR" id="sThree" name="Indian" required />
-			</tr>
-		</div>
-		</table>
 		
+		<label class="container">Undergraduate Program
+		<input type="radio" value="UG" id="sOne" name="Indian" required />
+		<span class="radiomark"></span>
+		</label>
+		<label class="container">Postgraduate Taught Program
+		<input type="radio" value="PGT" id="sTwo" name="Indian" required />
+		<span class="radiomark"></span>
+		</label>
+		<label class="container">Postgraduate Research Program
+		<input type="radio" value="PGR" id="sThree" name="Indian" required />
+		<span class="radiomark"></span>
+		</label>
+		
+			
 			
 		<!--Question 6-->
 		<h5>Which course/subject are you looking to pursue in the UK</h5>
@@ -220,45 +323,64 @@
 		<!--Question 7-->
 		<h5>What is the duration of the program that you are planning to study in the UK?</h5>
 		<table>
-        	<tr>
-				<th align="center"><label for="duration1">1 Yr</label></th>
-				<th align="center"><label for="duration2">2 Yr</label></th>
-				<th align="center"><label for="duration3">3 Yr</label></th>
-				<th align="center"><label for="duration4">4 Yr</label></th>
-				<th align="center"><label for="duration5">5+Yr</label></th>
-			</tr>
-			<tr>
-				<td align="center"><input type="radio" value="1" name="duration" id="duration1" required /></td>
-				<td align="center"><input type="radio" value="2" name="duration" id="duration2" required /></td>
-				<td align="center"><input type="radio" value="3" name="duration" id="duration3" required /></td>
-				<td align="center"><input type="radio" value="4" name="duration" id="duration4" required /></td>
-				<td align="center"><input type="radio" value="5" name="duration" id="duration5" required /></td>
-			</tr>
+		<tr>
+		<td>
+		<label class="container">1 Yr
+		<input type="radio" name="Yr" value="1" required />
+		<span class="radiomark"></span>
+		</label>
+		</td>
+		<td>
+		<label class="container">2 Yr
+		<input type="radio" name="Yr" value="2" required />
+		<span class="radiomark"></span>
+		</label>
+		</td>
+		<td>
+		<label class="container">3 Yr
+		<input type="radio" name="Yr" value="3" required />
+		<span class="radiomark"></span>
+		</label>
+		</td>
+		<td>
+		<label class="container">4 Yr
+		<input type="radio" name="Yr" value="4" required />
+		<span class="radiomark"></span>
+		</label>
+		</td>
+		<td>
+		<label class="container">5+Yr
+		<input type="radio" name="Yr" value="5" required />
+		<span class="radiomark"></span>
+		</label>
+		</td>
+		</tr>
 		</table>
+		
 		
 		<!--Question 8-->
 		<h5>Is there any specific region in the UK that you are focusing to apply to (or have applied to)?</h5>
-		<table>
-			<tr>
-				<td><label class="choice" for="location_1">London</label></td>
-				<td align><input id="location_1" name="locaiton" class="element checkbox" type="checkbox" value="London" /></td>
-			</tr>
-			<tr>
-				<td><label class="choice" for="location_2">England (excl. London)</label></td>
-				<td><input id="location_2" name="location" class="element checkbox" type="checkbox" value="England" /></td>
-			</tr>
-			<tr>
-				<td><label class="choice" for="location_3">Scotland</label></td>
-				<td><input id="location_3" name="location" class="element checkbox" type="checkbox" value="Scotland" /></td>
-			</tr>
-			<tr>
-				<td><label class="choice" for="location_4">Wales</label></td>
-				<td><input id="location_4" name="location" class="element checkbox" type="checkbox" value="Wales" /></td>
-			<tr>	
-				<td><label class="choice" for="location_5">Northern Ireland</label></td>
-				<td><input id="location_5" name="location" class="element checkbox" type="checkbox" value="Northern Ireland" /></td>
-			</tr>
-		</table>
+		<label class="container">London
+		<input id="location_1" name="locaiton" class="container" type="checkbox" value="London" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">England (excl. London)
+		<input id="location_1" name="locaiton" class="container" type="checkbox" value="England" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">Wales
+		<input id="location_1" name="locaiton" class="container" type="checkbox" value="Wales" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">Scotland
+		<input id="location_1" name="locaiton" class="container" type="checkbox" value="Scotland" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">Northern Ireland
+		<input id="location_1" name="locaiton" class="container" type="checkbox" value="Northern Ireland" />
+		<span class="checkmark"></span>
+		</label>
+		
 		
 		<!--Question 9-->
 		<h5>How many UK universities have you applied to?</h5>
@@ -267,18 +389,20 @@
 		<!--Question 10-->
 		<h5>Have you receieved an offer from any of the universities?</h5>
 		<table>
-		<div>
-			<tr>
-				<td><label for="oOne" class="radio">Yes</label></td>
-				<td><input type="radio" value="Yes" id="oOne" name="offer" required /></td>
-			</tr>
-		</div>
-		<div>
-            <tr>
-				<td><label for="oTwo" class="radio">No</label></td>
-				<td><input type="radio" value="No" id="oTwo" name="offer" required/>
-			</tr>
-		</div>	
+		<tr>
+		<td>
+		<label class="container">Yes
+		<input type="radio" name="offer" value="Yes" required />
+		<span class="radiomark"></span>
+		</label>
+		</td>
+		<td>
+		<label class="container">No
+		<input type="radio" name="offer" value="No" required />
+		<span class="radiomark"></span>
+		</label>
+		</td>
+		</tr>
 		</table>
 		
 		<!--Question 11-->
@@ -287,55 +411,40 @@
 		
 		<!--Question 12-->
 		<h5>Have you decided about whether you will be starting your UK education in the next intake (i.e. September/October 2020)?</h5>
-		<table>
-		<div>
-			<tr>
-				<td><label for="stOne" class="radio">Yes – I have decided I will start in Sep/Oct 2020</label></td>
-				<td><input type="radio" value="Yes" id="stOne" name="startsept" required /></td>
-			</tr>
-		</div>
-		<div>
-            <tr>
-				<td><label for="stTwo" class="radio">No - I have not decided yet</label></td>
-				<td><input type="radio" value="No" id="stTwo" name="startsept" required/>
-			</tr>
-		</div>	
-		</table>
+		<label class="container">Yes – I have decided I will start in Sep/Oct 2020
+		<input type="radio" value="Yes" id="stOne" name="startsept" required />
+		<span class="radiomark"></span>
+		</label>
+		<label class="container">No - I have not decided yet
+		<input type="radio" value="No" id="stTwo" name="startsept" required />
+		<span class="radiomark"></span>
+		</label>
+	
 		
 		<!--Question 13-->
 		<h5>If you haven’t yet decided, what is the reason? (You can choose multiple options)</h5>
-		<table>
-		<div>
-			<tr>
-				<td><label for="n1" class="radio">I am still evaluating my options</label></td>
-				<td><input type="checkbox" value="1" id="n1" name="notdecided"  /></td>
-			</tr>
-		</div>
-		<div>
-            <tr>
-				<td><label for="n2" class="radio">I am worried about whether it will be safe to travel</label></td>
-				<td><input type="checkbox" value="2" id="n2" name="notdecided" />
-			</tr>
-		</div>
-		<div>
-            <tr>
-				<td><label for="n3" class="radio">I do not have clarity about plans for Sep/Oct from the universities I am interested in</label></td>
-				<td><input type="checkbox" value="3" id="n3" name="notdecided" />
-			</tr>
-		</div>		
-		<div>
-            <tr>
-				<td><label for="n4" class="radio"></label>I want to come, but my family is now unsure due to safety concerns resulting from the Covid-19 situation</td>
-				<td><input type="checkbox" value="4" id="n4" name="notdecided" />
-			</tr>
-		</div>	
-		<div>
-            <tr>
-				<td><label for="n5" class="radio">Other</label></td>
-				<td><input type="text" id="n5" name="notdecided" />
-			</tr>
-		</div>
-		</table>
+		<label class="container">I am still evaluating my options
+		<input name="notdecided" class="container" type="checkbox" value="1" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">I am worried about whether it will be safe to travel
+		<input name="notdecided" class="container" type="checkbox" value="2" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">I do not have clarity about plans for Sep/Oct from the universities I am interested in
+		<input name="notdecided" class="container" type="checkbox" value="3" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">I want to come, but my family is now unsure due to safety concerns resulting from the Covid-19 situation
+		<input name="notdecided" class="container" type="checkbox" value="4" />
+		<span class="checkmark"></span>
+		</label>
+		<label id="nd1" class="container">Other
+		<input name="notdecided" class="container" type="checkbox" />
+		<span class="checkmark"></span>
+		</label>
+		<input id="nd1" name="notdecided" type="text" />
+		
 		
 		<!--Question 14-->
 		<h5>What are the 3 most important factors for you in choosing to study abroad?</h5>
@@ -506,74 +615,76 @@
 		
 		<!--Question 15-->
 		<h5>If you aren’t able to travel to the UK to study, which of the following factors would cause you the greatest disappointment?</h5>
-		<table>
-			<tr>
-				<td><label class="choice" for="u1">Not getting the physical experience of studying in a UK university</label></td>
-				<td align><input id="u1" name="unable" type="checkbox" value="1" /></td>
-			</tr>
-			<tr>
-				<td><label class="choice" for="u2">Not being able to experience life in the UK</label></td>
-				<td><input id="u2" name="unable" type="checkbox" value="2" /></td>
-			</tr>
-			<tr>
-				<td><label class="choice" for="u3">Not being able to make international friends in the UK</label></td>
-				<td><input id="u3" name="unable" type="checkbox" value="3" /></td>
-			</tr>
-			<tr>
-				<td><label class="choice" for="u4">Not being able to benefit from the new post study work visa (Graduate Route)</label></td>
-				<td><input id="u4" name="unable" type="checkbox" value="4" /></td>
-			<tr>	
-				<td><label class="choice" for="u5">Not having access to the university infrastructure in the UK (e.g. research labs, employment links etc.)</label></td>
-				<td><input id="u5" name="unable" type="checkbox" value="5" /></td>
-			</tr>
-			<tr>
-				<td><label class="choice" for="u6">I wouldn’t be very bothered by not being able to travel to the UK</label></td>
-				<td><input id="u6" name="unable" type="checkbox" value="6" /></td>
-			</tr>
-			<tr>
-				<td><label class="choice" for="u7">Other</label></td>
-				<td><input id="u7" name="unable" type="text" /></td>
-			</tr>
-		</table>
+		<label class="container">Not getting the physical experience of studying in a UK university
+		<input name="unable" class="container" type="checkbox" value="1" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">Not being able to experience life in the UK
+		<input name="unable" class="container" type="checkbox" value="2" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">Not being able to make international friends in the UK	
+		<input name="unable" class="container" type="checkbox" value="3" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">Not being able to benefit from the new post study work visa (Graduate Route)
+		<input name="unable" class="container" type="checkbox" value="4" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">Not having access to the university infrastructure in the UK (e.g. research labs, employment links etc.)
+		<input name="unable" class="container" type="checkbox" value="5" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">I wouldn’t be very bothered by not being able to travel to the UK
+		<input name="unable" class="container" type="checkbox" value="6" />
+		<span class="checkmark"></span>
+		</label>
+		<label id="nd2" class="container">Other
+		<input name="unable" class="container" type="checkbox" />
+		<span class="checkmark"></span>
+		</label>
+		<input id="nd2" name="unable" type="text" />
 		
+		
+			
 		<!--Question 16-->
 		<h5>If you are a student considering whether or not to accept a place at a UK university for a programme starting in Sept 2020, which of the following is true about your decision?  (You can select more than one option)</h5>
-		<table>
-			<tr>
-				<td><label class="choice" for="t1">I would join the program if at least some classes take place in-person, even if the whole program is not delivered in-person</label></td>
-				<td align><input id="t1" name="t" type="checkbox" value="1" /></td>
-			</tr>
-			<tr>
-				<td><label class="choice" for="t2">I would only join if the whole program is delivered in-person</label></td>
-				<td><input id="t2" name="t" type="checkbox" value="2" /></td>
-			</tr>
-			<tr>
-				<td><label class="choice" for="t3">If some of the classes will be online, I would only join if the school reduces their fees</label></td>
-				<td><input id="t3" name="t" type="checkbox" value="3" /></td>
-			</tr>
-			<tr>
-				<td><label class="choice" for="t4">I would join the program if there is more clarity and communication from the school on how teaching will be delivered; even if part of it will be online</label></td>
-				<td><input id="t4" name="t" type="checkbox" value="4" /></td>
-			<tr>	
-				<td><label class="choice" for="t5">I would only join the program if there are assurances from the school that our safety will be taken care of by the school in case a lockdown starts while we are there</label></td>
-				<td><input id="t5" name="t" type="checkbox" value="5" /></td>
-			</tr>
-			<tr>
-				<td><label class="choice" for="t6">I would only join the program if the UK government gives me a post study work visa, irrespective of whether the teaching is online or in-person</label></td>
-				<td><input id="t6" name="t" type="checkbox" value="6" /></td>
-			</tr>
-			<tr>
-				<td><label class="choice" for="t7">I would join the program irrespective of teaching and visa because I care about the brand name of the university</label></td>
-				<td><input id="t7" name="t" type="checkbox" value="6" /></td>
-			</tr>
-			<tr>
-				<td><label class="choice" for="t8">I would only join if the Indian government gives me an assurance that they will repatriate me in case international borders are sealed while I am in the UK.</label></td>
-				<td><input id="t8" name="t" type="checkbox" value="6" /></td>
-			</tr>
-		</table>
+		<label class="container">I would join the program if at least some classes take place in-person, even if the whole program is not delivered in-person
+		<input name="unable1" class="container" type="checkbox" value="1" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">I would only join if the whole program is delivered in-person
+		<input name="unable1" class="container" type="checkbox" value="2" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">If some of the classes will be online, I would only join if the school reduces their fees
+		<input name="unable1" class="container" type="checkbox" value="3" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">I would join the program if there is more clarity and communication from the school on how teaching will be delivered; even if part of it will be online
+		<input name="unable1" class="container" type="checkbox" value="4" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">I would only join the program if there are assurances from the school that our safety will be taken care of by the school in case a lockdown starts while we are there
+		<input name="unable1" class="container" type="checkbox" value="5" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">I would only join the program if the UK government gives me a post study work visa, irrespective of whether the teaching is online or in-person
+		<input name="unable1" class="container" type="checkbox" value="6" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">I would join the program irrespective of teaching and visa because I care about the brand name of the university
+		<input name="unable1" class="container" type="checkbox" value="7" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">I would only join if the Indian government gives me an assurance that they will repatriate me in case international borders are sealed while I am in the UK
+		<input name="unable1" class="container" type="checkbox" value="8" />
+		<span class="checkmark"></span>
+		</label>
 		
 		<!--Question 17-->
 		<h5>As an alternative to a full-time residential program in the UK, if a UK university were to offer a programme in partnership with an Indian university, which of the following would make such a program attractive for you? </h5>
+				
 		<table>
             <thead>
               <tr>
@@ -647,147 +758,137 @@
 		
 		<!--Question 18-->
 		<h5>Many British universities are considering moving to a completely online mode of teaching for the academic year 2020-21. Is this something you would be interested in?</h5>
-		<div>
-					<select id="british" name="british" required /> 
-						<option value="" selected="selected"></option>
-						<option value=”Yes”>Yes</option>
-						<option value=”No”>No</option>
-						<option value=”Lower Fee”>Yes - but I will want a lower fee</option>
-					</select>
-					</div>
+		<label class="container">Yes
+		<input type="radio" value="Yes" id="stOne" name="british" required />
+		<span class="radiomark"></span>
+		</label>
+		<label class="container">No
+		<input type="radio" value="No" id="stTwo" name="british" required />
+		<span class="radiomark"></span>
+		</label>
+		<label class="container">Yes - but I will want a lower fee
+		<input type="radio" value="No" id="stTwo" name="british" required />
+		<span class="radiomark"></span>
+		</label>
 		
 		<!--Question 19-->
 		<h5>Many British universities are considering moving to a partially online mode of teaching for the academic year 2020-21. This is likely to entail online learning in the beginning followed by regular classes when the Covid-19 situation improves. Is this something you would be interested in?</h5>
-		<div>
-					<select id="british1" name="british1" required /> 
-						<option value="" selected="selected"></option>
-						<option value=”Yes”>Yes</option>
-						<option value=”No”>No</option>
-						<option value=”Lower Fee”>Yes - but I will want a lower fee</option>
-					</select>
-					</div>
+		<label class="container">Yes
+		<input type="radio" value="Yes" id="stOne" name="british1" required />
+		<span class="radiomark"></span>
+		</label>
+		<label class="container">No
+		<input type="radio" value="No" id="stTwo" name="british1" required />
+		<span class="radiomark"></span>
+		</label>
+		<label class="container">Yes - but I will want a lower fee
+		<input type="radio" value="No" id="stTwo" name="british1" required />
+		<span class="radiomark"></span>
+		</label>
 		
 		<!--Question 20-->
 		<h5>Which of these options would you consider?</h5>
-		<table>
-		<div>
-			<tr>
-				<td><label for="kOne" class="radio">Online classes from Sept/Oct 2020, with the option to join on-campus as soon as possible</label></td>
-				<td><input type="radio" value="Online Classes" id="kOne" name="consider" required /></td>
-			</tr>
-		</div>
-		<div>
-            <tr>
-				<td><label for="kTwo" class="radio">Deferring to next intake when the situation returns to normal</label></td>
-				<td><input type="radio" value="Deferral" id="kTwo" name="consider" required />
-			</tr>
-		</div>
-		</table>
+		<label class="container">Online classes from Sept/Oct 2020, with the option to join on-campus as soon as possible
+		<input type="radio" value="Online" id="stOne" name="consider" required />
+		<span class="radiomark"></span>
+		</label>
+		<label class="container">Deferring to next intake when the situation returns to normal
+		<input type="radio" value="Defer" id="stTwo" name="consider" required />
+		<span class="radiomark"></span>
+		</label>
 		
 		<!--Question 21-->
 		<h5>Do you know about UK’s new Post Study Work visa (Graduate Route)?</h5>
-		<table>
-		<div>
-			<tr>
-				<td><label for="pOne" class="radio">Yes</label></td>
-				<td><input type="radio" value="Yes" id="pOne" name="PSW" required /></td>
-			</tr>
-		</div>
-		<div>
-            <tr>
-				<td><label for="pTwo" class="radio">No</label></td>
-				<td><input type="radio" value="No" id="pTwo" name="PSW" required />
-			</tr>
-		</div>
-		</table>
+		<label class="container">Yes
+		<input type="radio" value="Yes" id="stOne" name="psw" required />
+		<span class="radiomark"></span>
+		</label>
+		<label class="container">No
+		<input type="radio" value="No" id="stTwo" name="psw" required />
+		<span class="radiomark"></span>
+		</label>
 		
 		<!--Question 22-->
 		<h5>If yes, is it one of the reasons you are choosing to study in the UK?</h5>
-		<table>
-		<div>
-			<tr>
-				<td><label for="pyOne" class="radio">Yes</label></td>
-				<td><input type="radio" value="Yes" id="pyOne" name="PSW1"  /></td>
-			</tr>
-		</div>
-		<div>
-            <tr>
-				<td><label for="pyTwo" class="radio">No</label></td>
-				<td><input type="radio" value="No" id="pyTwo" name="PSW1"  />
-			</tr>
-		</div>
-		</table>
+		<label class="container">Yes
+		<input type="radio" value="Yes" id="stOne" name="psw1" required />
+		<span class="radiomark"></span>
+		</label>
+		<label class="container">No
+		<input type="radio" value="No" id="stTwo" name="psw1" required />
+		<span class="radiomark"></span>
+		</label>
 		
 		<!--Question 23-->
 		<h5>If not UK, which other countries would you prefer to study in?</h5>
-		<table>
-			<tr>
-				<td><label class="choice" for="nuk1">USA</label></td>
-				<td align><input id="nuk1" name="locaiton" class="element checkbox" type="checkbox" value="USA" /></td>
-			</tr>
-			<tr>
-				<td><label class="choice" for="nuk2">Canada</label></td>
-				<td><input id="nuk2" name="location" class="element checkbox" type="checkbox" value="Canada" /></td>
-			</tr>
-			<tr>
-				<td><label class="choice" for="nuk3">Australia</label></td>
-				<td><input id="nuk3" name="location" class="element checkbox" type="checkbox" value="Australia" /></td>
-			</tr>
-			<tr>
-				<td><label class="choice" for="nuk4">New Zealand</label></td>
-				<td><input id="nuk4" name="location" class="element checkbox" type="checkbox" value="New Zealand" /></td>
-			<tr>	
-				<td><label class="choice" for="nuk5">Germany</label></td>
-				<td><input id="nuk5" name="location" class="element checkbox" type="checkbox" value="Germany" /></td>
-			</tr>
-			<tr>	
-				<td><label class="choice" for="nuk6">France</label></td>
-				<td><input id="nuk6" name="location" class="element checkbox" type="checkbox" value="France" /></td>
-			</tr>
-			<tr>	
-				<td><label class="choice" for="nuk7">Spain</label></td>
-				<td><input id="nuk7" name="location" class="element checkbox" type="checkbox" value="Spain" /></td>
-			</tr>
-			<tr>	
-				<td><label class="choice" for="nuk8">Denmark</label></td>
-				<td><input id="nuk8" name="location" class="element checkbox" type="checkbox" value="Denmark" /></td>
-			</tr>
-			<tr>	
-				<td><label class="choice" for="nuk9">Ireland</label></td>
-				<td><input id="nuk9" name="location" class="element checkbox" type="checkbox" value="Ireland" /></td>
-			</tr>
-			<tr>	
-				<td><label class="choice" for="nuk10">Singapore</label></td>
-				<td><input id="nuk10" name="location" class="element checkbox" type="checkbox" value="Singapore" /></td>
-			</tr>
-			<tr>	
-				<td><label class="choice" for="nuk11">Dubai</label></td>
-				<td><input id="nuk11" name="location" class="element checkbox" type="checkbox" value="Dubai" /></td>
-			</tr><tr>	
-				<td><label class="choice" for="nuk12">Switzerland</label></td>
-				<td><input id="nuk12" name="location" class="element checkbox" type="checkbox" value="Switzerland" /></td>
-			</tr>
-			<tr>	
-				<td><label class="choice" for="nuk13">China</label></td>
-				<td><input id="nuk13" name="location" class="element checkbox" type="checkbox" value="China" /></td>
-			</tr>
-			<tr>	
-				<td><label class="choice" for="nuk14">Other</label></td>
-				<td><input id="nuk14" name="location" class="element checkbox" type="text" /></td>
-			</tr>
-		</table>
+		<label class="container">USA
+		<input id="location_1" name="nuk" class="container" type="checkbox" value="USA" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">Canada
+		<input id="location_1" name="nuk" class="container" type="checkbox" value="Canada" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">Australia
+		<input id="location_1" name="nuk" class="container" type="checkbox" value="Australia" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">Germany
+		<input id="location_1" name="nuk" class="container" type="checkbox" value="Germany" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">New Zealand
+		<input id="location_1" name="nuk" class="container" type="checkbox" value="New Zealand" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">France
+		<input id="location_1" name="nuk" class="container" type="checkbox" value="France" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">Spain
+		<input id="location_1" name="nuk" class="container" type="checkbox" value="Spain" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">Denmark
+		<input id="location_1" name="nuk" class="container" type="checkbox" value="Denmark" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">Switzerland
+		<input id="location_1" name="nuk" class="container" type="checkbox" value="Switzerland" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">Singapore
+		<input id="location_1" name="nuk" class="container" type="checkbox" value="Singapore" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">Ireland
+		<input id="location_1" name="nuk" class="container" type="checkbox" value="Ireland" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">Dubai
+		<input id="location_1" name="nuk" class="container" type="checkbox" value="Dubai" />
+		<span class="checkmark"></span>
+		</label>
+		<label class="container">China
+		<input id="location_1" name="nuk" class="container" type="checkbox" value="China" />
+		<span class="checkmark"></span>
+		</label>
+		<label id="nd2" class="container">Other
+		<input name="nuk" class="container" type="checkbox" />
+		<span class="checkmark"></span>
+		</label>
+		<input id="nd2" name="unable" type="text" />
 		
 		<div class="btn-block">
           <button type="submit" href="/">Submit</button>
         </div>
-		
-<br><br>
+		<br><br>
 		<footer>
 		<center>
 		<hr>
 		<a href="https://www.nisu.org.uk">www.nisu.org.uk</a>|<a href="https://www.nisauupdates.com">www.nisauupdates.com</a>
 		</center>
 		</footer>
-</form>
+		</form>
 	</body>
 </html>
