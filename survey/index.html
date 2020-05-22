@@ -898,15 +898,19 @@
   const form = document.forms['submit-to-google-sheet']
 
   form.addEventListener('submit', e => {
+	console.log('T1');
     e.preventDefault()
+	console.log('T2');
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {console.log('Success!', response)})
-      .catch(error => console.error('Error!', error.message))
-  })
-  var test = confirm( "Do you want to submit this?" );
+      .then(response => {
+	  console.log('T2');
+	  console.log('Success!', response)})
+      .catch(error => {console.log('T2');
+	  console.error('Error!', error.message)})
+	  var result = confirm( "Do you want to submit this?" );
 
-if ( test ) {
-    window.location.href="https://www.nisauupdates.com/survey/redirect.html";
+if ( result ) {
+    window.location.href="redirect.html";
 } else {
     // the user clicked cancel or closed the confirm dialog.
 }
