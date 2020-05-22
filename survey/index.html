@@ -439,11 +439,11 @@
 		<input name="notdecided" class="container" type="checkbox" value="4" />
 		<span class="checkmark"></span>
 		</label>
-		<label id="nd1" class="container">Other
+		<label id="notdecided" class="container">Other
 		<input name="notdecided" class="container" type="checkbox" />
 		<span class="checkmark"></span>
 		</label>
-		<input id="nd1" name="notdecided" type="text" />
+		<input id="notdecided" name="notdecided" type="text" />
 		
 		
 		<!--Question 14-->
@@ -607,8 +607,8 @@
 		</div>
 		<div>
             <tr>
-				<td><label for="f13" class="radio">Other</label></td>
-				<td><input type="text" id="f13" name="fother" />
+				<td><label for="fother" class="radio">Other</label></td>
+				<td><input type="text" id="fother" name="fother" />
 			</tr>
 		</div>
 		</table>
@@ -639,11 +639,11 @@
 		<input name="unable" class="container" type="checkbox" value="6" />
 		<span class="checkmark"></span>
 		</label>
-		<label id="nd2" class="container">Other
+		<label id="unable" class="container">Other
 		<input name="unable" class="container" type="checkbox" />
 		<span class="checkmark"></span>
 		</label>
-		<input id="nd2" name="unable" type="text" />
+		<input id="unable" name="unable" type="text" />
 		
 		
 			
@@ -873,7 +873,7 @@
 		<input id="location_1" name="nuk" class="container" type="checkbox" value="China" />
 		<span class="checkmark"></span>
 		</label>
-		<label id="nd2" class="container">Other
+		<label id="nuk" class="container">Other
 		<input name="nuk" class="container" type="checkbox" />
 		<span class="checkmark"></span>
 		</label>
@@ -900,7 +900,15 @@
   form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
+      .then(response => {console.log('Success!', response)})
       .catch(error => console.error('Error!', error.message))
+  })
+  var result = confirm( "Do you want to submit this?" );
+
+if ( result ) {
+    window.location.href="redirect.html";
+} else {
+    // the user clicked cancel or closed the confirm dialog.
+}
   })
 </script>
