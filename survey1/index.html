@@ -4,7 +4,7 @@
     <title>NISAU Survey Form</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-	<meta name=”viewport” content=”width=device-width, initial-scale=1″>
+	<meta name=”viewport” content=”width=device-width, initial-scale=2″>
     <style>
 	/* The container */
 .container {
@@ -210,11 +210,11 @@
   </head>
   <body>
     <div class="testbox">
-      <form action="/">
+      <form name="submit-to-google-sheet">
         
 		<!--Introduction-->
 		<center>
-		<img src="\img\NISAU_logo.png" width="20%" height="20%">
+		<img src="C:\Users\aakas\Desktop\survey1\img\NISAU_logo.png" width="20%" height="20%">
 		<h1 style="color:#095484">NISAU Survey Form</h1>
         </center>
 		<p align="justify">The Covid-19 pandemic has considerably impacted the higher education sector in the UK and globally. The UK is a popular destination for Indian students, many of whom have been looking forward to commencing their studies in the UK from September onward but are now faced with confusion and uncertainty around whether they would be able to proceed as planned. We, the National Indian Students and Alumni Union UK are conducting this survey to ascertain the concerns and requirements of Indian students so that we can support universities and higher education stakeholders in responding better to Indian students' requirements.</p>
@@ -291,7 +291,7 @@
 		
 		<!--Question 4-->
 		<h5>What’s the most recent level of course you completed?</h5>
-        <input class="education" type="text" name="educate" placeholder="(e.g. CBSE 12th Boards, Undergraduate degree etc.)" required />
+        <input class="education" type="text" name="education" placeholder="(e.g. CBSE 12th Boards, Undergraduate degree etc.)" required />
 		
 		
 		<br><br><br>
@@ -302,15 +302,15 @@
 		<h5>What level of course are you planning to study in the UK?</h5>
 		
 		<label class="container">Undergraduate Program
-		<input type="radio" value="UG" id="sOne" name="Indian" required />
+		<input type="radio" value="UG" id="sOne" name="program-level" required />
 		<span class="radiomark"></span>
 		</label>
 		<label class="container">Postgraduate Taught Program
-		<input type="radio" value="PGT" id="sTwo" name="Indian" required />
+		<input type="radio" value="PGT" id="sTwo" name="program-level" required />
 		<span class="radiomark"></span>
 		</label>
 		<label class="container">Postgraduate Research Program
-		<input type="radio" value="PGR" id="sThree" name="Indian" required />
+		<input type="radio" value="PGR" id="sThree" name="program-level" required />
 		<span class="radiomark"></span>
 		</label>
 		
@@ -453,7 +453,7 @@
 			<tr>
 				<td><label for="f1" class="radio">The global brand, ranking and prestige of the university</label></td>
 				<td><div>
-					<select id="f1" name="state" required /> 
+					<select id="f1" name="f1"  /> 
 						<option value="" selected="selected"></option>
 						<option value=”A1”>1</option>
 						<option value=”A2”>2</option>
@@ -466,7 +466,7 @@
             <tr>
 				<td><label for="f2" class="radio">The ranking of the department at the university I am applying to</label></td>
 				<td><div>
-					<select id="f2" name="state" required /> 
+					<select id="f2" name="f2"  /> 
 						<option value="" selected="selected"></option>
 						<option value=”B1”>1</option>
 						<option value=”B2”>2</option>
@@ -479,7 +479,7 @@
             <tr>
 				<td><label for="f3" class="radio">The ability to gain international work experience during my course</label></td>
 				<td><div>
-					<select id="f3" name="state" required /> 
+					<select id="f3" name="f3"  /> 
 						<option value="" selected="selected"></option>
 						<option value=”C1”>1</option>
 						<option value=”C2”>2</option>
@@ -492,7 +492,7 @@
             <tr>
 				<td><label for="f4" class="radio">I want to come, but my family is now unsure due to safety concerns resulting from the Covid-19 situation</label></td>
 				<td><div>
-					<select id="f4" name="state" required /> 
+					<select id="f4" name="f4"  /> 
 						<option value="" selected="selected"></option>
 						<option value=”D1”>1</option>
 						<option value=”D2”>2</option>
@@ -505,7 +505,7 @@
             <tr>
 				<td><label for="f5" class="radio">Having a post study work visa to help me look for job or work experience after my course ends</label></td>
 				<td><div>
-					<select id="f5" name="state" required /> 
+					<select id="f5" name="f5"  /> 
 						<option value="" selected="selected"></option>
 						<option value=”E1”>1</option>
 						<option value=”E2”>2</option>
@@ -518,7 +518,7 @@
             <tr>
 				<td><label for="f6" class="radio">The experience of living in another country</label></td>
 				<td><div>
-					<select id="f6" name="state" required /> 
+					<select id="f6" name="f6"  /> 
 						<option value="" selected="selected"></option>
 						<option value=”F1”>1</option>
 						<option value=”F2”>2</option>
@@ -531,7 +531,7 @@
             <tr>
 				<td><label for="f7" class="radio">Exposure to variety of courses</label></td>
 				<td><div>
-					<select id="f7" name="state" required /> 
+					<select id="f7" name="f7"  /> 
 						<option value="" selected="selected"></option>
 						<option value=”G1”>1</option>
 						<option value=”G2”>2</option>
@@ -544,7 +544,7 @@
             <tr>
 				<td><label for="f8" class="radio">The chance of securing part time work while studying</label></td>
 				<td><div>
-					<select id="f8" name="state" required /> 
+					<select id="f8" name="f8"  /> 
 						<option value="" selected="selected"></option>
 						<option value=”H1”>1</option>
 						<option value=”h5”>2</option>
@@ -557,7 +557,7 @@
             <tr>
 				<td><label for="f9" class="radio">The location of the university</label></td>
 				<td><div>
-					<select id="f9" name="state" required /> 
+					<select id="f9" name="f9"  /> 
 						<option value="" selected="selected"></option>
 						<option value=”I1”>1</option>
 						<option value=”I2”>2</option>
@@ -570,7 +570,7 @@
             <tr>
 				<td><label for="f10" class="radio">Availability of scholarships</label></td>
 				<td><div>
-					<select id="f10" name="state" required /> 
+					<select id="f10" name="f10"  /> 
 						<option value="" selected="selected"></option>
 						<option value=”J1”>1</option>
 						<option value=”J2”>2</option>
@@ -583,7 +583,7 @@
             <tr>
 				<td><label for="f11" class="radio">Tuition fees</label></td>
 				<td><div>
-					<select id="f11" name="state" required /> 
+					<select id="f11" name="f11"  /> 
 						<option value="" selected="selected"></option>
 						<option value=”K1”>1</option>
 						<option value=”K2”>2</option>
@@ -596,7 +596,7 @@
             <tr>
 				<td><label for="f12" class="radio">Social Life</label></td>
 				<td><div>
-					<select id="f12" name="state" required /> 
+					<select id="f12" name="f12"  /> 
 						<option value="" selected="selected"></option>
 						<option value=”L1”>1</option>
 						<option value=”L2”>2</option>
@@ -608,7 +608,7 @@
 		<div>
             <tr>
 				<td><label for="f13" class="radio">Other</label></td>
-				<td><input type="text" id="f13" name="notdecided" />
+				<td><input type="text" id="f13" name="fother" />
 			</tr>
 		</div>
 		</table>
@@ -650,35 +650,35 @@
 		<!--Question 16-->
 		<h5>If you are a student considering whether or not to accept a place at a UK university for a programme starting in Sept 2020, which of the following is true about your decision?  (You can select more than one option)</h5>
 		<label class="container">I would join the program if at least some classes take place in-person, even if the whole program is not delivered in-person
-		<input name="unable1" class="container" type="checkbox" value="1" />
+		<input name="options" class="container" type="checkbox" value="1" />
 		<span class="checkmark"></span>
 		</label>
 		<label class="container">I would only join if the whole program is delivered in-person
-		<input name="unable1" class="container" type="checkbox" value="2" />
+		<input name="options" class="container" type="checkbox" value="2" />
 		<span class="checkmark"></span>
 		</label>
 		<label class="container">If some of the classes will be online, I would only join if the school reduces their fees
-		<input name="unable1" class="container" type="checkbox" value="3" />
+		<input name="options" class="container" type="checkbox" value="3" />
 		<span class="checkmark"></span>
 		</label>
 		<label class="container">I would join the program if there is more clarity and communication from the school on how teaching will be delivered; even if part of it will be online
-		<input name="unable1" class="container" type="checkbox" value="4" />
+		<input name="options" class="container" type="checkbox" value="4" />
 		<span class="checkmark"></span>
 		</label>
 		<label class="container">I would only join the program if there are assurances from the school that our safety will be taken care of by the school in case a lockdown starts while we are there
-		<input name="unable1" class="container" type="checkbox" value="5" />
+		<input name="options" class="container" type="checkbox" value="5" />
 		<span class="checkmark"></span>
 		</label>
 		<label class="container">I would only join the program if the UK government gives me a post study work visa, irrespective of whether the teaching is online or in-person
-		<input name="unable1" class="container" type="checkbox" value="6" />
+		<input name="options" class="container" type="checkbox" value="6" />
 		<span class="checkmark"></span>
 		</label>
 		<label class="container">I would join the program irrespective of teaching and visa because I care about the brand name of the university
-		<input name="unable1" class="container" type="checkbox" value="7" />
+		<input name="options" class="container" type="checkbox" value="7" />
 		<span class="checkmark"></span>
 		</label>
 		<label class="container">I would only join if the Indian government gives me an assurance that they will repatriate me in case international borders are sealed while I am in the UK
-		<input name="unable1" class="container" type="checkbox" value="8" />
+		<input name="options" class="container" type="checkbox" value="8" />
 		<span class="checkmark"></span>
 		</label>
 		
@@ -699,27 +699,27 @@
             <tbody>
               <tr>
                 <td class="first-col">Being taught by UK professors online</td>
-                <td><input type="radio" value="1" name="useful" required/></td>
-                <td><input type="radio" value="2" name="useful" required/></td>
-                <td><input type="radio" value="3" name="useful" required/></td>
-                <td><input type="radio" value="4" name="useful" required/></td>
-                <td><input type="radio" value="5" name="useful" required/></td>
+                <td><input type="radio" value="1" name="taught_by_UK_prof" required/></td>
+                <td><input type="radio" value="2" name="taught_by_UK_prof" required/></td>
+                <td><input type="radio" value="3" name="taught_by_UK_prof" required/></td>
+                <td><input type="radio" value="4" name="taught_by_UK_prof" required/></td>
+                <td><input type="radio" value="5" name="taught_by_UK_prof" required/></td>
               </tr>
               <tr>
                 <td class="first-col">Part of the study program to take place in the UK</td>
-                <td><input type="radio" value="1" name="speaker" required/></td>
-                <td><input type="radio" value="2" name="speaker" required/></td>
-                <td><input type="radio" value="3" name="speaker" required/></td>
-                <td><input type="radio" value="4" name="speaker" required/></td>
-                <td><input type="radio" value="5" name="speaker" required/></td>
+                <td><input type="radio" value="1" name="part_in_UK" required/></td>
+                <td><input type="radio" value="2" name="part_in_UK" required/></td>
+                <td><input type="radio" value="3" name="part_in_UK" required/></td>
+                <td><input type="radio" value="4" name="part_in_UK" required/></td>
+                <td><input type="radio" value="5" name="part_in_UK" required/></td>
               </tr>
               <tr>
                 <td class="first-col">A degree from the UK university</td>
-                <td><input type="radio" value="1" name="length" required/></td>
-                <td><input type="radio" value="2" name="length" required/></td>
-                <td><input type="radio" value="3" name="length" required/></td>
-                <td><input type="radio" value="4" name="length" required/></td>
-                <td><input type="radio" value="5" name="length" required/></td>
+                <td><input type="radio" value="1" name="uk_degree" required/></td>
+                <td><input type="radio" value="2" name="uk_degree" required/></td>
+                <td><input type="radio" value="3" name="uk_degree" required/></td>
+                <td><input type="radio" value="4" name="uk_degree" required/></td>
+                <td><input type="radio" value="5" name="uk_degree" required/></td>
               </tr>
 			  <tr>
                 <td class="first-col">Networking opportunities in the UK</td>
@@ -731,11 +731,11 @@
               </tr>
 			  <tr>
                 <td class="first-col">Ability to secure the post study work visa regardless of the online aspect of my course</td>
-                <td><input type="radio" value="1" name="psw2" required/></td>
-                <td><input type="radio" value="2" name="psw2" required/></td>
-                <td><input type="radio" value="3" name="psw2" required/></td>
-                <td><input type="radio" value="4" name="psw2" required/></td>
-                <td><input type="radio" value="5" name="psw2" required/></td>
+                <td><input type="radio" value="1" name="psw" required/></td>
+                <td><input type="radio" value="2" name="psw" required/></td>
+                <td><input type="radio" value="3" name="psw" required/></td>
+                <td><input type="radio" value="4" name="psw" required/></td>
+                <td><input type="radio" value="5" name="psw" required/></td>
               </tr>
 			  <tr>
                 <td class="first-col">Assurances from both British and Indian Governments that there would be no issues around the recognition of such a course in either country </td>
@@ -759,30 +759,30 @@
 		<!--Question 18-->
 		<h5>Many British universities are considering moving to a completely online mode of teaching for the academic year 2020-21. Is this something you would be interested in?</h5>
 		<label class="container">Yes
-		<input type="radio" value="Yes" id="stOne" name="british" required />
+		<input type="radio" value="Yes" id="stOne" name="complete-online" required />
 		<span class="radiomark"></span>
 		</label>
 		<label class="container">No
-		<input type="radio" value="No" id="stTwo" name="british" required />
+		<input type="radio" value="No" id="stTwo" name="complete-online" required />
 		<span class="radiomark"></span>
 		</label>
 		<label class="container">Yes - but I will want a lower fee
-		<input type="radio" value="No" id="stTwo" name="british" required />
+		<input type="radio" value="No" id="stTwo" name="complete-online" required />
 		<span class="radiomark"></span>
 		</label>
 		
 		<!--Question 19-->
 		<h5>Many British universities are considering moving to a partially online mode of teaching for the academic year 2020-21. This is likely to entail online learning in the beginning followed by regular classes when the Covid-19 situation improves. Is this something you would be interested in?</h5>
 		<label class="container">Yes
-		<input type="radio" value="Yes" id="stOne" name="british1" required />
+		<input type="radio" value="Yes" id="stOne" name="partially-online" required />
 		<span class="radiomark"></span>
 		</label>
 		<label class="container">No
-		<input type="radio" value="No" id="stTwo" name="british1" required />
+		<input type="radio" value="No" id="stTwo" name="partially-online" required />
 		<span class="radiomark"></span>
 		</label>
 		<label class="container">Yes - but I will want a lower fee
-		<input type="radio" value="No" id="stTwo" name="british1" required />
+		<input type="radio" value="No" id="stTwo" name="partially-online" required />
 		<span class="radiomark"></span>
 		</label>
 		
@@ -800,22 +800,22 @@
 		<!--Question 21-->
 		<h5>Do you know about UK’s new Post Study Work visa (Graduate Route)?</h5>
 		<label class="container">Yes
-		<input type="radio" value="Yes" id="stOne" name="psw" required />
+		<input type="radio" value="Yes" id="stOne" name="know-psw" required />
 		<span class="radiomark"></span>
 		</label>
 		<label class="container">No
-		<input type="radio" value="No" id="stTwo" name="psw" required />
+		<input type="radio" value="No" id="stTwo" name="know-psw" required />
 		<span class="radiomark"></span>
 		</label>
 		
 		<!--Question 22-->
 		<h5>If yes, is it one of the reasons you are choosing to study in the UK?</h5>
 		<label class="container">Yes
-		<input type="radio" value="Yes" id="stOne" name="psw1" required />
+		<input type="radio" value="Yes" id="stOne" name="reason-psw" required />
 		<span class="radiomark"></span>
 		</label>
 		<label class="container">No
-		<input type="radio" value="No" id="stTwo" name="psw1" required />
+		<input type="radio" value="No" id="stTwo" name="reason-psw" required />
 		<span class="radiomark"></span>
 		</label>
 		
@@ -880,7 +880,7 @@
 		<input id="nd2" name="unable" type="text" />
 		
 		<div class="btn-block">
-          <button type="submit" href="/">Submit</button>
+          <button type="submit">Submit</button>
         </div>
 		<br><br>
 		<footer>
@@ -892,3 +892,15 @@
 		</form>
 	</body>
 </html>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxvs9jKLz5hLb85eBVYZcdEwF3oFJ2D4zVZYqx7tgTSHalJgTs/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
